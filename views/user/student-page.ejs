@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Course Page</title>
+    <link rel="stylesheet" href="css/student-page.css" />
+  </head>
+  <body>
+    <div class="profile-container" id="profile-container">
+      <img
+        src="profile-placeholder.png"
+        alt="Profile Image"
+        class="profile-image"
+        id="profile-image"
+      />
+    </div>
+
+    <div class="blur-background" id="blur-background"></div>
+
+    <form class="profile-form" id="profile-form">
+      <h2>Update Profile</h2>
+      <label for="profile-pic">Profile Image</label>
+      <input type="file" id="profile-pic" name="profile-pic" />
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" />
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" name="phone" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <header>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search courses..."
+          class="search-input"
+        />
+        <button class="search-button">Search</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="courses-list">
+        <div class="course-item">Course 1</div>
+        <div class="course-item">Course 2</div>
+        <div class="course-item">Course 3</div>
+        <div class="course-item">Course 4</div>
+      </section>
+    </main>
+
+    <script src="js/student.js"></script>
+  </body>
+</html>
