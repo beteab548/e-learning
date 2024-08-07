@@ -39,8 +39,13 @@ body {
 
 .container h1 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: inline-block;
+  color: rgb(68, 64, 64);
+}
+
+.container h2 {
+  color: rgb(68, 64, 64);
 }
 
 .highlighted {
@@ -71,9 +76,82 @@ body {
   margin: 0 auto;
 }
 
+section {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.what-we-provide {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.provide-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.provide-section-1,
+.provide-section-2 {
+  flex: 1;
+  max-width: 45%;
+  height: auto;
+  margin: 0;
+  padding: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #a2c2e0, #c6d8e4, #e8f1f2);
+}
+
+.provide-section-2 {
+  background: linear-gradient(to right, #a2c2e0, #c6d8e4, #e8f1f2);
+}
+
+.provide-section h4 {
+  margin-top: 0;
+}
+
+/* Remove default list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style list items */
+ul li {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+  color: #333;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.provide-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: rgb(68, 64, 64);
+}
+
+.what-we-provide h3 {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: rgb(91, 116, 194);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .container h1 {
@@ -81,7 +159,21 @@ body {
   }
 
   .container h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
+  }
+
+  .what-we-provide {
+    padding: 10px;
+  }
+
+  .provide-section-1,
+  .provide-section-2 {
+    max-width: 100%;
+  }
+
+  .provide-points {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -100,7 +192,7 @@ body {
   }
 
   .container h2 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .highlighted::before,
@@ -110,4 +202,35 @@ body {
     left: -3px;
     right: -3px;
   }
+
+  .what-we-provide h3 {
+    font-size: 1.5em;
+  }
+
+  .provide-section-1,
+  .provide-section-2 {
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
+
+@keyframes slideInOut {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#courses ul li {
+  display: inline-block;
+  animation: slideInOut 9s linear infinite;
+}
+
+#courses ul li:hover {
+  animation-play-state: paused;
 }
